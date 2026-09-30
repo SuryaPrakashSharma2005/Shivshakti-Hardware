@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+:root {
+  --color-ink: #1e1b18;
+  --color-ink-soft: #2c2822;
+  --color-concrete: #ece7de;
+  --color-concrete-dark: #ddd5c4;
+  --color-paper: #f7f4ee;
+  --color-steel: #6e655c;
+  --color-rust: #b6491f;
+  --color-rust-dark: #8f3714;
+  --color-yellow: #dc9c2f;
+  --color-line: #d8cfc0;
+  --color-line-dark: #423c34;
+
+  --font-display: var(--font-bebas), sans-serif;
+  --font-body: var(--font-plex-sans), sans-serif;
+  --font-mono: var(--font-plex-mono), monospace;
+}
+
+@theme inline {
+  --color-ink: var(--color-ink);
+  --color-ink-soft: var(--color-ink-soft);
+  --color-concrete: var(--color-concrete);
+  --color-concrete-dark: var(--color-concrete-dark);
+  --color-paper: var(--color-paper);
+  --color-steel: var(--color-steel);
+  --color-rust: var(--color-rust);
+  --color-rust-dark: var(--color-rust-dark);
+  --color-yellow: var(--color-yellow);
+  --color-line: var(--color-line);
+  --color-line-dark: var(--color-line-dark);
+
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+  --font-mono: var(--font-mono);
+}
+
+* {
+  border-color: var(--color-line);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-concrete);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: 0.01em;
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-rust);
+  outline-offset: 2px;
+}
+
+@keyframes swatch-rise {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
+.animate-swatch-rise {
+  transform-origin: bottom;
+  animation: swatch-rise 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.6s ease-out both;
+}
