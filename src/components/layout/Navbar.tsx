@@ -28,7 +28,7 @@ export function Navbar() {
             <span className="font-display text-2xl sm:text-3xl text-ink leading-none">
               Shivshakti
             </span>
-            <span className="hidden sm:inline text-xs uppercase tracking-[0.18em] text-rust font-body font-semibold">
+            <span className="text-[10px] sm:text-xs uppercase tracking-[0.18em] text-rust font-body font-semibold">
               Hardware
             </span>
           </Link>
@@ -122,7 +122,8 @@ export function Navbar() {
       )}
 
       <p className="hidden sm:block text-center text-[11px] text-steel bg-concrete-dark py-1">
-        Bhakura Bhithi, Saran, Bihar — locally known as &ldquo;{business.localName}&rdquo;
+        Bhakura Bhithi, Saran, Bihar — locally known as{" "}
+        <span className="text-rust font-semibold">&ldquo;{business.localName}&rdquo;</span>
       </p>
     </header>
   );

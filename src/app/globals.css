@@ -14,7 +14,7 @@
   --color-line-dark: #423c34;
 
   --font-display: var(--font-bebas), sans-serif;
-  --font-body: var(--font-plex-sans), sans-serif;
+  --font-body: var(--font-plex-sans), var(--font-plex-sans-devanagari), sans-serif;
   --font-mono: var(--font-plex-mono), monospace;
 }
 

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Bebas_Neue, IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
+import { Bebas_Neue, IBM_Plex_Sans, IBM_Plex_Sans_Devanagari, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -20,6 +20,12 @@ const plexSans = IBM_Plex_Sans({
   weight: ["400", "500", "600", "700"],
 });
 
+const plexSansDevanagari = IBM_Plex_Sans_Devanagari({
+  variable: "--font-plex-sans-devanagari",
+  subsets: ["devanagari"],
+  weight: ["400", "500", "600", "700"],
+});
+
 const plexMono = IBM_Plex_Mono({
   variable: "--font-plex-mono",
   subsets: ["latin"],
@@ -33,7 +39,7 @@ export const metadata: Metadata = {
     template: "%s | Shivshakti Hardware",
   },
   description:
-    "Shivshakti Hardware, Bhakura Bhithi, Saran (Bihar) — locally known as Sarpanch Saheb Ka Dukaan. Construction materials, hardware, plumbing supplies and paints, with easy WhatsApp enquiry and digital billing.",
+    "Shivshakti Hardware, Bhakura Bhithi, Saran (Bihar) — locally known as सरपंच साहेब का दुकान (Sarpanch Saheb Ka Dukaan). Construction materials, hardware, plumbing supplies and paints, with easy WhatsApp enquiry and digital billing.",
   keywords: [
     "Shivshakti Hardware",
     "hardware shop in Saran",
@@ -62,7 +68,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${bebas.variable} ${plexSans.variable} ${plexMono.variable} h-full antialiased`}
+      className={`${bebas.variable} ${plexSans.variable} ${plexSansDevanagari.variable} ${plexMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-concrete text-ink">
         <LocalBusinessJsonLd />

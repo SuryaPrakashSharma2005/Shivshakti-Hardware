@@ -1,6 +1,6 @@
 export const business = {
   name: "Shivshakti Hardware",
-  localName: "Sarpanch Saheb Ka Dukaan",
+  localName: "सरपंच साहेब का दुकान",
   proprietor: "Ankit Singh",
   tagline: "Building Materials • Hardware • Plumbing • Paints",
   address: {
