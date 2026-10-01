@@ -11,11 +11,18 @@ export function LocalBusinessJsonLd() {
       "Building construction material and hardware store offering cement, gitti, baalu, chhar, hardware, plumbing supplies and paints.",
     address: {
       "@type": "PostalAddress",
-      streetAddress: business.address.line1,
-      addressLocality: business.address.district,
+      streetAddress: `${business.address.line1}, ${business.address.road}`,
+      addressLocality: business.address.postOffice,
       addressRegion: business.address.state,
+      postalCode: business.address.pincode,
       addressCountry: business.address.country,
     },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: business.mapsCoordinates.lat,
+      longitude: business.mapsCoordinates.lng,
+    },
+    hasMap: business.mapsDirectionsUrl,
     founder: {
       "@type": "Person",
       name: business.proprietor,

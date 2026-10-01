@@ -33,7 +33,8 @@ export default function ContactPage() {
             <p className="font-semibold text-ink">{business.name}</p>
             <p className="text-sm text-steel mt-1">Proprietor: {business.proprietor}</p>
             <p className="text-sm text-steel mt-1">
-              {business.address.line1}, {business.address.district}, {business.address.state}
+              {business.address.line1}, {business.address.road}, {business.address.district},{" "}
+              {business.address.state} {business.address.pincode}
             </p>
 
             <div className="mt-6 space-y-4">
@@ -49,8 +50,8 @@ export default function ContactPage() {
             </div>
 
             <p className="mt-6 text-xs text-steel">
-              Placeholder contact details shown above — update with the
-              store&apos;s actual phone, WhatsApp, email and hours.
+              Email and business hours shown above are placeholders — update
+              with the store&apos;s actual details.
             </p>
 
             <p className="mt-8 inline-flex items-center gap-1.5 text-sm text-steel">
