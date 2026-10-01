@@ -51,8 +51,8 @@ export function Hero() {
 
           <div className="relative h-72 sm:h-96 lg:h-[28rem] rounded-sm border border-line overflow-hidden">
             <Image
-              src="/images/construction-materials.jpg"
-              alt="Front loader stacking gravel at a construction aggregate yard"
+              src="/images/Hero.jpeg"
+              alt="Shivshakti Hardware storefront"
               fill
               sizes="(min-width: 1024px) 45vw, 100vw"
               priority
